@@ -26,9 +26,9 @@ export default function Registration() {
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formBasicAge">
                         <Form.Label>Age</Form.Label>
-                        <Form.Control type="number" placeholder="Enter age" {...register("age", { required: true, min: 18, max: 99 })} />
+                        <Form.Control type="number" placeholder="Enter age" {...register("age", { required: true, min: 13, max: 99 })} />
                         {errors.age?.type === 'required' && <small className="text-danger">Age is required</small>}
-                        {errors.age?.type === 'min' && <small className="text-danger">Age cannot be less than 18</small>}
+                        {errors.age?.type === 'min' && <small className="text-danger">Age cannot be less than 13</small>}
                         {errors.age?.type === 'max' && <small className="text-danger">Age cannot be greater than 99</small>}
                     </Form.Group>
                     <Form.Group as={Col} controlId="formBasicDob">
