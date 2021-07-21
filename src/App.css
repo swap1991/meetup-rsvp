@@ -39,8 +39,18 @@ div.search-box {
 }
 
 div.search-box input {
+  border: none;
+  border-radius: 25px;
   padding: 0.35rem 1rem;
-  width: 600px;
+  width: 90%;
+}
+
+div.search-box input:focus {
+  box-shadow: 0 0 3pt 2pt cornflowerblue;
+}
+
+div.search-box input:focus-visible {
+  outline: none;
 }
 
 div.list-wrapper {
@@ -48,7 +58,10 @@ div.list-wrapper {
   margin: 2rem 3rem;
   max-height: 400px;
   overflow-y: auto;
-  max-width: 600px;
+}
+
+div.list-wrapper div {
+  width: 400px;
 }
 
 /* Reports styles */
