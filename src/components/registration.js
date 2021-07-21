@@ -1,7 +1,9 @@
 import { useForm } from "react-hook-form";
-import { Form, Button, Row, Col, InputGroup } from "react-bootstrap";
+import { Form, Button, Row, Col, InputGroup, Alert } from "react-bootstrap";
+import { useState } from "react";
 
 export default function Registration() {
+    const [show, setShow] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         fetch('https://meetup-rsvp-api.free.beeceptor.com/api/registration', {
@@ -12,7 +14,7 @@ export default function Registration() {
             body: JSON.stringify(data)
         })
             .then(response => response.json())
-            .then(res => console.log(res));
+            .then(res => setShow(true));
     }
     return (
         <div>
@@ -70,6 +72,12 @@ export default function Registration() {
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
+                {
+                    show &&
+                    <Alert variant="success" className="mt-3" onClose={() => setShow(false)} dismissible>
+                        Congratulations! You have been successfully registered.
+                    </Alert>
+                }
             </Form>
         </div>
     );
