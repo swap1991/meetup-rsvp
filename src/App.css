@@ -3,7 +3,7 @@
 }
 
 .container {
-  height: 100vh;
+  height: 100%;
 }
 
 .center-aligned {
@@ -12,7 +12,27 @@
   justify-content: center;
 }
 
+/* Registration styles */
 .registration-form {
+  width: 600px;
+  margin: 5rem 3rem;
   padding: 2rem;
   background-color: #fff;
+}
+
+textarea {
+  resize: none;
+}
+
+
+/* Header styles */
+div.me-auto a {
+  text-decoration: none;
+  color: #eee;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+}
+
+div.me-auto a:hover {
+  background-color: #0000003d;
 }

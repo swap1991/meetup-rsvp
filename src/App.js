@@ -1,13 +1,22 @@
 import { Container } from "react-bootstrap";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Registration from "./components/registration";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Registration from "./components/registration";
+import Header from "./components/header";
 
 function App() {
   return (
-    <Container className="center-aligned">
-      <Registration />
-    </Container>
+    <Router>
+      <Header />
+      <Container className="center-aligned">
+        <Switch>
+          <Route exact path="/">
+            <Registration />
+          </Route>
+        </Switch>
+      </Container>
+    </Router>
   );
 }
 
