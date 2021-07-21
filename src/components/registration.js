@@ -42,7 +42,7 @@ export default function Registration() {
                         <Form.Label>Profession</Form.Label>
                         <Form.Select defaultValue="" {...register("profession", { required: true })}>
                             <option hidden value="">Select profession</option>
-                            <option value="Employee">Employee</option>
+                            <option value="Employee">Employed</option>
                             <option value="Student">Student</option>
                         </Form.Select>
                         {errors.profession?.type === 'required' && <small className="text-danger">Profession is required</small>}

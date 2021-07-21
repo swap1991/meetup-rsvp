@@ -12,7 +12,7 @@ export default function RegisteredUsers() {
         <div>
             <h2 className="text-light text-center mt-5">Registered Users</h2>
             <div className="search-box text-center">
-                <input type="text" placeholder="Search" onChange={e => searchInList(e.target.value)} />
+                <input type="text" placeholder="Search..." onChange={e => searchInList(e.target.value)} />
             </div>
             <div className="list-wrapper border rounded">
                 {users && users.map((row, index) => 

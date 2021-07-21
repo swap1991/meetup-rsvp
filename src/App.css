@@ -50,3 +50,34 @@ div.list-wrapper {
   overflow-y: auto;
   max-width: 600px;
 }
+
+/* Reports styles */
+div.reports-wrapper {
+  margin: 5rem 3rem;
+  width: 100%;
+}
+
+div.reports-wrapper .card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.reports-wrapper .card-wrapper .card {
+  margin: 0 1rem;
+}
+
+div.reports-wrapper .card-wrapper .card .card-title,
+div.reports-wrapper .card-wrapper .card .card-text {
+  text-align: center;
+}
+
+div.reports-wrapper .card-wrapper .card .card-text {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+div.reports-wrapper .pie-chart {
+  width: 300px;
+  margin: auto;
+}
